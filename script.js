@@ -34,6 +34,13 @@ function resizeGrid(size) {
     buildGrid(size);
 }
 
+function clearGrid() {
+    const tileList = document.querySelectorAll(".tile");
+    for (const tile of tileList) {
+        tile.classList.remove("hovered");
+    }
+}
+
 const gridResizeBtn = document.querySelector("#gridResizeBtn");
 gridResizeBtn.addEventListener("click", () => {
     let size = 0;
@@ -44,6 +51,11 @@ gridResizeBtn.addEventListener("click", () => {
             }
         } while (size <= 0 || size > 100);
         resizeGrid(size);
+});
+
+const gridClearBtn = document.querySelector("#gridClearBtn");
+gridClearBtn.addEventListener("click", () => {
+    clearGrid();
 });
 
 buildGrid(16);
