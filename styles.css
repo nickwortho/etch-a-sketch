@@ -1,5 +1,5 @@
 .gridContainer {
-    outline: 2px solid red;
+    outline: 2px solid grey;
     display: flex;
     flex-direction: column;
 }
@@ -10,6 +10,11 @@
 }
 
 .tile {
-    outline: 1px solid red;
+    outline: 1px solid grey;
+    background-color: white;
     padding: 3.125%;
+}
+
+.hovered {
+    background-color: red;
 }

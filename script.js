@@ -10,3 +10,11 @@ for(let i = 0; i < 16; i++) {
         row.appendChild(tile);
     }
 }
+
+// hover tile fill colour
+const tileList = document.querySelectorAll(".tile");
+for (const tile of tileList) {
+    tile.addEventListener("mouseenter", () => {
+        tile.classList.add("hovered");
+    });
+}
