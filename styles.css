@@ -1,20 +1,28 @@
 .gridContainer {
+    width: 90%;
+    aspect-ratio: 1;
     outline: 2px solid grey;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .row {
     display: flex;
     justify-content: space-evenly;
+    flex: 1;
 }
 
 .tile {
     outline: 1px solid grey;
     background-color: white;
-    padding: 3.125%;
+    flex: 1;
 }
 
 .hovered {
     background-color: red;
+}
+
+button {
+    margin: 1rem;
 }
