@@ -36,7 +36,13 @@ function resizeGrid(size) {
 
 const gridResizeBtn = document.querySelector("#gridResizeBtn");
 gridResizeBtn.addEventListener("click", () => {
-        const size = promptGridSize();
+    let size = 0;
+        do {
+            size = promptGridSize();
+            if (size <= 0 || size > 100){
+                alert("Size must be between 1-100.");
+            }
+        } while (size <= 0 || size > 100);
         resizeGrid(size);
 });
 
